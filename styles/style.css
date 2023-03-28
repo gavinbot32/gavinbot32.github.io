@@ -1,0 +1,85 @@
+body{
+    background-color: rgb(25, 25, 35);
+    -webkit-text-fill-color: rgb(233, 233, 233);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.pageTitle{
+    text-align: center;
+    padding-top: 20px;
+    vertical-align: middle;
+}
+
+
+#pageUnderline{
+    background-color: rgb(233, 233, 233);
+    height: 5px;
+    vertical-align: bottom;
+    
+}
+
+#navbarDiv{
+    background-color: rgb(92, 92, 92);
+    text-align: center;
+}
+
+.navbar{
+    list-style-type: none;
+    display: inline-block;
+
+}
+
+.navbarLi{
+    float: left;
+
+}
+
+#active{
+    background-color: rgb(43, 42, 42);
+
+}
+
+.navbarA{
+    display: block;
+    background-color: rgb(92, 92, 92);
+    padding: 10px;
+    text-decoration: none;
+    -webkit-text-fill-color: whitesmoke;
+    font-size: x-large;
+
+}
+
+
+
+.ulGrid{
+    list-style-type: none;
+    text-align: center;
+}
+
+.divGrid{
+    display: inline-block;
+    outline: auto;
+   margin: 5px;
+}
+
+.liGrid{
+    display: inline-block;
+}
+
+.hGrid{
+    padding-left: 5px;
+}
+
+.pGrid{
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 10px;
+
+}
+
+

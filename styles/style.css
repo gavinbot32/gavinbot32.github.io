@@ -56,43 +56,30 @@ h1{
 
 
 
-<<<<<<< HEAD
 .projIMG{
     height: 125px;
     margin: -5px;
 }
 
 
-=======
->>>>>>> a21fa7ee15dd3d674037e2f46ac07f60de20bd7e
 .ulGrid{
     list-style-type: none;
     text-align: center;
 }
 
 .divGrid{
-<<<<<<< HEAD
     display: inline-flexbox;
     outline: auto;
    margin: 5px;
    
-=======
-    display: inline-block;
-    outline: auto;
-   margin: 5px;
->>>>>>> a21fa7ee15dd3d674037e2f46ac07f60de20bd7e
 }
 
 .liGrid{
     display: inline-block;
 }
 
-<<<<<<< HEAD
 .hGrid{ 
     padding-top: 10px;
-=======
-.hGrid{
->>>>>>> a21fa7ee15dd3d674037e2f46ac07f60de20bd7e
     padding-left: 5px;
 }
 
@@ -100,7 +87,6 @@ h1{
     width: 200px;
     padding-left: 20px;
     padding-right: 10px;
-<<<<<<< HEAD
     height: 125px;
 }
 
@@ -128,13 +114,8 @@ h1{
   
   float:right;
   padding-left:5px;
-=======
->>>>>>> a21fa7ee15dd3d674037e2f46ac07f60de20bd7e
 
 }
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> a21fa7ee15dd3d674037e2f46ac07f60de20bd7e

@@ -56,6 +56,44 @@ h1{
 
 
 
+
+#socialBarDiv{
+    
+    text-align: center;
+}
+
+.socialBar{
+    list-style-type: none;
+    display: inline-block;
+
+}
+
+.socialBarLi{
+    float: left;
+
+}
+
+
+.socialBarA{
+    padding: 10px;
+    text-decoration: none;
+    
+
+}
+
+.socialButton{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: block;
+
+    -webkit-text-fill-color: rgb(0, 0, 0);
+    font-size: x-large;
+}
+
+
+
+
 .projIMG{
     height: 125px;
     margin: -5px;

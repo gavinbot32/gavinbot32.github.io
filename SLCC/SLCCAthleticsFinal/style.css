@@ -1,0 +1,539 @@
+
+body {
+    background: linear-gradient(hsl(207, 100%, 20%),hsl(207, 100%, 10%)) ;
+    font-family: "Rubik", sans-serif;
+    border: none;
+    margin: 0;
+    min-height: 100%;
+}
+
+
+.main-container {
+    margin-top: 3em; 
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    gap: 3em;
+    flex-wrap: wrap;
+}
+
+.body-container {
+  margin-top: 0;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  gap: 3em;
+  flex-wrap: wrap;
+}
+
+.left-parent {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3em;
+}
+
+
+.navBar{
+    margin:0;
+    padding: 0%;
+    border: none;
+    width: 100%;
+    height: 75px;
+    background-color: hsl(40, 100%, 50%);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.61);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+
+
+.navButton {
+  height: 100%;
+  margin: 0;
+  width: auto;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: .5em;
+  padding-bottom: 0;
+  padding-top: 0;
+  font-size: 1.5em;
+  text-align: center;
+  border-right: 1px solid black;
+}
+
+.navButton:hover{
+  background-color:hsl(207, 100%, 25%);
+}
+
+.navButton:last-child{
+  border-right: none;
+}
+
+
+
+#mainTitle{
+    text-align: center;
+    display: block;
+    margin-top: 100px;
+    margin-bottom: 0;
+    font-family: "Hanuman";
+}
+
+#mainTitle h1{
+    margin: 0;
+    padding: 0;
+    font-size: 7rem;
+    line-height: .5;
+    font-weight: 900;
+    color: #ffb700;
+    --strokeColor--: white;
+    text-shadow: 
+    -5px -5px 0 var(--strokeColor--),
+    5px 5px 0 var(--strokeColor--),
+    5px -5px 0 var(--strokeColor--),
+    -5px 5px 0 var(--strokeColor--);
+    
+}
+
+#mainTitle h2{
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+}
+#mainTitle h3{
+  margin: 0;
+  padding: 0;
+  font-size: 7rem;
+  line-height: .5;
+  font-weight: 900;
+  color: #ffb700;
+  --strokeColor--: white;
+  text-shadow: 
+  -5px -5px 0 var(--strokeColor--),
+  5px 5px 0 var(--strokeColor--),
+  5px -5px 0 var(--strokeColor--),
+  -5px 5px 0 var(--strokeColor--);
+  
+}
+#aboutDiv{
+  width: 50%;
+  color: rgb(185, 185, 185);
+}
+
+#aboutDiv h1{
+  color:#ffb700;
+  font-size: 4em;
+  text-align: left;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#aboutDiv p{
+  color: white;
+  font-size: 2em;
+
+  margin-top: 0.5em;
+}
+
+ /* Basic styles for the slideshow container */
+ .slideshow-container {
+    position: relative;
+    margin: 0;
+    margin-bottom: auto;
+    overflow:hidden;
+    width: 37.5em;
+    aspect-ratio: 1.76/1;
+    border: 3px solid white;
+    border-bottom: none;
+ }
+
+ /* Background panel for the text */
+ .slide .background-panel {
+    position: absolute;
+    bottom: -4px;
+    width: 100%;
+    height: 20%; /* Increased height to accommodate the date and header */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 10px; /* Left padding for text alignment */
+    box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.6);
+    border-bottom: 4px solid white;
+  }
+  
+  /* Styles for each slide */
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  /* Slide image */
+  .slide img {
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid #333;
+    border: none;
+  }
+  .slide img:hover{
+    cursor: pointer;
+  }
+  .slide h2 {
+    margin: 0;
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  .slide .date {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffb700; /* Lighter color for the date */
+    margin: 0;
+    padding-top: 5px;
+  }
+  /* Arrows */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    vertical-align: middle;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    aspect-ratio: 1/1;
+    width: 3rem;
+    font-weight: bold;
+    border-radius: 50%;
+    border-style: none;
+    font-size: 24px;
+    z-index: 2;
+  }
+
+  /* Positioning of arrows */
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+  /* Active slide */
+  .slide.active {
+    opacity: 1;
+    display: block;
+    z-index: 1;
+  }
+
+
+  .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffb700;
+    transition: width 7.5 linear;
+    z-index: 3;
+  }
+
+
+  /* Container with blue background */
+  .teams-container {
+    background-color: hsl(207, 100%, 20%); /* Light blue background */
+    padding: 15px;
+    max-width: 400px;
+    margin: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 5px solid white;
+    font-family: "Rubik", sans-serif;
+  }
+
+
+  /* Header styling */
+  .teams-header {
+    font-size: 2rem;
+    text-align: left;
+    color: white; /* Dark blue color */
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 8px;
+    padding-top: 0;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  /* Team list item styling */
+  .team-item {
+    color: white; /* Dark blue color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid hsl(0, 0%, 83%);
+    transition: background-color 0.3s ease,
+                color 0.3s ease, 
+                border-bottom 0.3s ease; 
+    }
+
+  /* Team button styling for name */
+  .team-button {
+    font-size: 1rem;
+    color: #ffffff; /* Dark blue color */
+    background: transparent;
+    font-weight: bold;
+    border:none;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    gap: 35%;
+  }
+
+  .team-item:hover{
+    background-color: #ffb700;
+    color:#0056b3; /* Dark blue color */
+    border-bottom: 2px solid black; /* Dark blue color */
+  }
+
+  .team-item:hover .team-button {
+    color: #0056b3;
+  }
+
+
+  /* Team links styling */
+  .team-links {
+    color: inherit;
+    display: flex;
+    gap: 15px; /* Spacing between links */
+  }
+
+  /* Link styling */
+  .team-links a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    }
+
+  /* Link hover effect */
+  .team-links a:hover {
+    color: white; /* Slightly darker color on hover */
+  }
+
+
+  .links-parent {
+    background-color: hsl(207, 100%, 20%); /* Light blue background */
+    padding:15px;
+    width: 35.5em;
+    margin: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 5px solid white;
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+
+  /* Container with blue background */
+  .links-containera {
+    font-family: "Rubik", sans-serif;
+    width: 49.5%;
+    border-right: 2px solid white;
+  }
+
+  .links-containerb {
+    font-family: "Rubik", sans-serif;
+    width: 49.5%;
+    border-left: 2px solid white;
+  }
+
+
+  /* Header styling */
+  .links-header {
+    font-size: 2rem;
+    text-align: left;
+    color: white; /* Dark blue color */
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 8px;
+    padding-top: 0;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    flex-basis: 100%;
+  }
+
+  /* Team list item styling */
+  .links-item {
+    color: white; /* Dark blue color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid hsl(0, 0%, 83%);
+    transition: background-color 0.3s ease,
+                color 0.3s ease, 
+                border-bottom 0.3s ease; 
+                
+    }
+
+  /* Team button styling for name */
+  .links-button {
+    font-size: 1rem;
+    color: #ffffff; /* Dark blue color */
+    background: transparent;
+    font-weight: bold;
+    border:none;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    gap: 35%;
+  }
+
+  .links-item:hover{
+    background-color: #ffb700;
+    color:#0056b3; /* Dark blue color */
+    border-bottom: 2px solid black; /* Dark blue color */
+  }
+
+  .links-item:hover .links-button {
+    color: #0056b3;
+  }
+
+
+  /* Team links styling */
+  .quick-links {
+    color: inherit;
+    display: flex;
+    gap: 15px; /* Spacing between links */
+  }
+
+  /* Link styling */
+  .quick-links a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    }
+
+  /* Link hover effect */
+  .quick-links a:hover {
+    color: white; /* Slightly darker color on hover */
+  }
+
+
+
+  
+
+  .home-events-container {
+    background-color: hsl(207, 100%, 20%); /* Light blue background */
+    padding:15px;
+    width: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 5px solid white;
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .events-header {
+    color: white;
+    border-bottom: 3px solid white;
+    padding-bottom: 10px;
+    }
+
+    .event-item{
+        background-color:aliceblue;
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .event-info{
+        display: flex;
+        gap: 2em;
+    }
+
+    .event-item h2{
+        font-size: 1.25em;
+    }
+
+    .ticket-button {
+        border: 3px solid black;
+        background-color: hsl(207, 100%, 30%);
+        font-size: 1.25em;
+        font-family: "Rubik", sans-serif;
+        font-weight: bold;
+        color: white;
+        align-self: center;
+        padding: .5em;
+        text-decoration: none;
+        transition: color 0.15s ease,
+                    background-color 0.15s ease;
+    }
+
+    .ticket-button:hover {
+        background-color: #ffb700;
+        color: hsl(207, 100%, 30%);
+        cursor: pointer;
+    }
+
+    .home-events-container .event-item:nth-last-of-type(even){
+        background-color:hsl(40, 100%, 80%);
+    }
+
+
+    footer{
+        background-color: black;
+        border-bottom: #ffb700 solid 3px;
+        width: 100%;
+        position: relative;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        margin-top: 5em;
+        min-height: 150px;
+        
+    }
+
+  #social-media-container{
+    
+    gap: 20px;
+    bottom: 25%;
+    
+  }
+
+  #social-media-container img{
+    height: 75px;
+    width: auto;
+  }
+
+
+  .hyper-link{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+  .foot{
+    color: white;
+  }
+
+  .hyper-link:hover{
+    color:#ffb700;
+  }

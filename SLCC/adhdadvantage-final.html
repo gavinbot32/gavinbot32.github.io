@@ -12,23 +12,60 @@
       background-color: #f0f8ff;
       color: #333;
     }
-    header {
-      background-color: #005f73;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      margin-left: 1.5rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    .navbar {
+  background-color: rgba(0, 95, 115, 0.9); /* slightly transparent blue */
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: top 0.3s, background-color 0.3s;
+}
+
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.logo a {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: bold;
+  inline-size: 0px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #90e0ef; /* light blue hover */
+}
+
     .hero {
       text-align: center;
-      padding: 3rem 2rem;
+      padding: 5rem 2rem;
       background-color: #e0fbfc;
     }
     .hero h1 {
@@ -254,18 +291,106 @@
   padding-right: 2rem; /* alt-story needs padding on opposite side */
   padding-left: 0;
 }
+
+.resources-section {
+  padding: 4rem 2rem;
+  background-color: #f0f8ff;
+  text-align: center;
+}
+
+.resources-intro {
+  max-width: 700px;
+  margin: 1rem auto 3rem auto;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.resources-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.resource-card {
+  background-color: #ffffff;
+  border: 2px solid #caf0f8;
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.resource-description {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.resource-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #0077b6;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.resource-link:hover {
+  background-color: #023e8a;
+}
+.resource-title-container {
+  position: relative;
+  display: inline-block; /* shrink to fit the text */
+  margin: 0 auto 1rem auto; /* center block horizontally */
+}
+
+.resource-title {
+  color: #005f73;
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: center;
+}
+
+.resource-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 100%; /* stick just to the right of text */
+  margin-right: 8px; /* little gap */
+  width: 50px;
+  height: 50px;
+}
+
+
+
+
   </style>
 </head>
+
 <body>
 
-<header>
-  <h2>ADHD: Your Advantage</h2>
-  <nav>
-    <a href="#strength">Strengths</a>
-    <a href="#tools">Strategies</a>
-    <a href="#stories">Stories</a>
-  </nav>
-</header>
+  <header class="navbar">
+    <div class="logo">
+      <a href="#home">ADHD Advantage</a>
+    </div>
+    <div class="navbar-container">
+      <nav class="nav-links">
+        <a href="#tools">Strategies</a>
+        <a href="#stories">Success Stories</a>
+        <a href="#resources">Resources</a>
+        <a href="#references">References</a>
+      </nav>
+    </div>
+  </header>
+  
 
 <section id="home" class="hero">
   <h1>Welcome to ADHD: Your Advantage</h1>
@@ -425,7 +550,7 @@
   </div>
 </section>
 
-<section id="success-stories" class="stories-section">
+<section id="stories" class="stories-section">
   <h2 class="section-header">ADHD Success Stories</h2>
 
   <div class="stories-container">
@@ -508,6 +633,7 @@
           <p>Howie Mandel has spoken openly about living with ADHD. He credits his unique thought patterns, quick humor, 
             and bold creativity to his ADHD brain. Rather than suppressing it, Howie learned to lean into his 
             fast-paced thinking and use it as a career superpower, showing that different wiring can lead to unforgettable success.
+
           </p>
         </div>
         <span class="toggle-icon">+</span>
@@ -519,6 +645,90 @@
 
   </div>
 </section>
+
+<section id="resources" class="resources-section">
+  <h2 class="section-header">Resources to Power Your Journey</h2>
+  <p class="resources-intro">You're not alone. These tools, communities, and apps are here to help you unlock your ADHD strengths and thrive every day.</p>
+
+  <div class="resources-container">
+
+    <div class="resource-card">
+      <div class="resource-title-container">
+        <img src="https://d393uh8gb46l22.cloudfront.net/wp-content/uploads/2018/08/CHADD-4.png" alt="CHADD Icon" class="resource-icon">
+        <h3 class="resource-title">CHADD.org</h3>
+      </div>
+      <p class="resource-description">The largest ADHD support organization in the U.S., providing resources for youth, adults, and families.</p>
+      <a href="https://chadd.org" target="_blank" class="resource-link">Learn More</a>
+    </div>
+
+    <div class="resource-card">
+      <div class="resource-title-container">
+        <img src="https://howtoadhd.com/wp-content/uploads/2024/03/Logo-Transparent-1.png" alt="HTADHD Icon" class="resource-icon">
+        <h3 class="resource-title">How To ADHD</h3>
+      </div>
+      <p class="resource-description">Jessica McCabe’s popular YouTube channel offering ADHD tips, motivation, and community support for all ages.</p>
+      <a href="https://www.youtube.com/c/HowtoADHD" target="_blank" class="resource-link">Learn More</a>
+    </div>
+    <div class="resource-card">
+      <div class="resource-title-container">
+        <img src="https://images.ctfassets.net/9haz2glq4wt0/6yCXCt6iAd5k6UIr0U4vF3/57c9519b2fb254b155c2a852db1b8def/Forest_App_-_Logo.png?h=256&fm=webp&fit=pad&w=256&q=100" alt="Forest Icon" class="resource-icon">
+        <h3 class="resource-title">Forest App</h3>
+      </div>
+      <p class="resource-description">A unique productivity app that helps you stay focused by growing virtual trees as you work. Build your forest as you grow your focus!</p>
+      <a href="https://www.forestapp.cc/" target="_blank" class="resource-link">Learn More</a>
+    </div>
+
+    <div class="resource-card">
+      <div class="resource-title-container">
+        <img src="https://www.understood.org/_next/image?url=https%3A%2F%2Fcdn-images.understood.org%2Fp0qf7j048i0q%2F5NpItnYj8elb6jFEVVSYWn%2Fa7e72837b1b947882852d6b1bfb6efc2%2FUnderstood-Avatar-400x400-navy.png&w=3840&q=75" alt="Understood Icon" class="resource-icon">
+        <h3 class="resource-title">Understood.org</h3>
+      </div>
+      <p class="resource-description">A leading organization dedicated to supporting people with learning and attention differences, including ADHD. Great for students and families.</p>
+      <a href="https://www.understood.org" target="_blank" class="resource-link">Learn More</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="references" style="padding: 3rem 2rem; background-color: #e0f7fa; text-align: center;">
+  <h2 class="section-header">References</h2>
+  <div style="max-width: 800px; margin: auto; text-align: left; font-size: 1rem; line-height: 1.7;">
+    <ul style="list-style-type: none; padding: 0;">
+      <li><strong>Saline, S.</strong> (2022). 
+        <a href="https://www.psychologytoday.com/us/blog/your-way-adhd/202203/hyperfocus-and-adhd-productivity-superpower-or-kryptonite" target="_blank" style="color:#0077b6; text-decoration: underline;">
+          Hyperfocus and ADHD: Productivity Superpower or Kryptonite?</a>. <em>Psychology Today</em>.</li>
+
+      <li><strong>Angel, T. </strong> (2023). 
+        <a href="https://www.healthline.com/health/adhd" target="_blank" style="color:#0077b6; text-decoration: underline;">
+          Everything You Need to Know About ADHD</a>. <em>healthline</em>.</li>
+
+
+      <li><strong>Ashinoff, B.K., & Abu-Akel, A.</strong> (2019). 
+        <a href="https://doi.org/10.1007/s00426-019-01245-8" target="_blank" style="color:#0077b6; text-decoration: underline;">
+          Hyperfocus: The Forgotten Frontier of Attention</a>. <em>Psychological Research</em>.</li>
+
+      <li><strong>National Institute of Mental Health (NIMH).</strong> 
+        <a href="https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know" target="_blank" style="color:#0077b6; text-decoration: underline;">
+          Attention-Deficit/Hyperactivity Disorder: What You Need to Know</a>.</li>
+
+      <li><strong>Child Mind Institute.</strong>
+         <a href="https://childmind.org/topics/concerns/adhd/" target="_blank" style="color:#0077b6; text-decoration: underline;">
+          ADHD Resources for Parents</a>.</li>
+
+      <li><strong>CHADD.org.</strong> <a href="https://chadd.org" target="_blank" style="color:#0077b6; text-decoration: underline;">
+        ADHD Information and Support</a>.</li>
+      <li><strong>How to ADHD.</strong> <a href="https://www.youtube.com/c/HowtoADHD" target="_blank" style="color:#0077b6; text-decoration: underline;">Educational ADHD YouTube Channel</a>.</li>
+      <li><strong>Forest App.</strong> <a href="https://www.forestapp.cc/" target="_blank" style="color:#0077b6; text-decoration: underline;">Focus and Productivity Tool</a>.</li>
+      <li><strong>Understood.org.</strong> <a href="https://www.understood.org" target="_blank" style="color:#0077b6; text-decoration: underline;">Learning and Attention Resources</a>.</li>
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+
 
 <script>
   function toggleStep(stepElement) {
@@ -542,6 +752,23 @@
     icon.textContent = "+";
   }
 }
+
+let lastScrollTop = 0;
+const navbar = document.querySelector('header');
+
+window.addEventListener('scroll', function() {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // Scrolling down
+    navbar.style.top = "-100px"; // Adjust if your navbar is taller
+  } else {
+    // Scrolling up
+    navbar.style.top = "0";
+  }
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Avoid negative scroll
+});
+
   </script>
 </body>
 

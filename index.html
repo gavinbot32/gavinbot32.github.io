@@ -1,59 +1,104 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gavin Murdock | Software Development Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-
 <body>
+    <header class="site-header">
+        <div class="container">
+            <div class="profile">
+                <div>
+                    <h1>Gavin Murdock</h1>
+                    <p>Computer Science & Software Development</p>
+                </div>
+            </div>
+            
+
+            <nav>
+                <a href="#projects">Projects</a>
+                <a href="#about">About Me</a>
+                <a href="https://github.com/gavinbot32" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/gavin-murdock-1797a030a/" target="_blank">LinkedIn</a>
+            </nav>           
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro intro-about" id="about">
+            <h2>About Me</h2>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <img src="assets/portrait.png" alt="a portait of Gavin.">
+                <div>
+                    <h3>Hi I'm Gavin,</h3>
+                    <p>I'm a Computer Science student with a focus on software development and a strong interest in understanding how things work beneath the surface.</p>
+                    <p>I've been programming for several years, starting with Python and eventually working with Java, C#, C++, and game development in Unity.
+                        A lot of my experience has come from building projects simply because I wanted to figure something out, whether that's implementing pathfinding algorithms,
+                        communicating directly with an IRC network, experimenting with simulations, or building a voxel renderer from scratch.
+                    </p>
+                    <p>
+                        I've also spent time as a programming teaching assistant, where I helped students with Python and Unity/C# development.
+                        During that time, I built several projects of my own alongside the classes, helped students debug their programs,
+                        and occasionally created software for my instructor to use in the classroom.
+                    </p>
+                    <p>
+                        I'm currently studying Computer Science and continuing to build projects that push me into areas I haven't worked with before.
+                        I'm particularly interested in software development, algorithms, graphics, simulations, game development, and lower-level programming.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro" id="projects">
+            <h2>Projects</h2>
+            <p>
+                A collection of software development, computer science, game development, and programming projects.
+            </p>
+        </section>
+        
+        <section class=""project-controls">
+            
+            <div class="sort-section">
+                <label for="sort-projects">
+                    Sort by
+                </label>
+
+                <select id="sort-projects">
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                    <option value="alphabetical">A-Z</option>
+                </select>
+            </div>
+            
+            <div class="filter-section">
+                <span class="control-label">Filter by tag</span>
+
+                <div
+                    id="filter-buttons"
+                    class="filter-buttons">
+                </div>
+            </div>
+
+            
+
+        </section>
+
+        <section id="project-grid" class="project-grid"></section>
 
 
-    <h1>Gavinbot32 Page</h1>
+    </main>
 
-    <div id="navbarDiv">
-        <ul class="navbar">
-
-            <li  class="navbarLi"><a href="index.html" class="navbarA" id="active">Home</a></li>
-            <li class="navbarLi"><a href="about.html"class="navbarA">About Me</a></li>
-            <li class="navbarLi"><a href="projects.html" class="navbarA">Builds</a></li>
-            <li class="navbarLi"><a href="games.html"class="navbarA">Games</a></li>
-            <li class="navbarLi"><a href="applications.html" class="navbarA">Apps</a></li>
-            <li class="navbarLi"><a href="assets.html" class="navbarA">Assets</a></li>
-
-
-        </ul>
-    </div>
-
-<div>Maybe a slideshow of showcase items??</div>
-
-<div>Latest patch notes for projects</div>
-
+    <script src="js/projects.js"></script>
+    <script src="js/portfolio.js"></script>
 
 </body>
-<footer>
-
-    <div id="socialBarDiv">
-        <ul class="socialBar">
-
-            <li>
-                <a href="https://github.com/gavinbot32/DND-Encounter" target="_blank">
-                    <button type="button" class="socialButton">
-                        <div class="bttnDivGrid"> 
-                        <img class="socialIMG"src="assets/web-assets/youtube_icon.png" alt="youtube_icon.png" width=40px height=40px></div>
-                    </button>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/gavinbot32/DND-Encounter" target="_blank">
-                    <button type="button" class="socialButton">
-                        <div class="bttnDivGrid"> 
-                        <img class="socialIMG"src="assets/web-assets/youtube_icon.png" alt="youtube_icon.png" width=40px height=40px></div>
-                    </button>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-</footer>
 
 </html>
